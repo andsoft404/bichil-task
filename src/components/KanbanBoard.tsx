@@ -19,7 +19,6 @@ import {
   Trash2,
   Archive,
   RotateCcw,
-  Tag,
   ArrowLeft,
 } from 'lucide-react';
 import type { Card, Column, BoardMeta } from '../types/board';
