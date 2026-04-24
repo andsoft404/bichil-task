@@ -1,0 +1,247 @@
+.board-column {
+  background: #f1f2f4;
+  border-radius: 12px;
+  min-width: 272px;
+  max-width: 272px;
+  max-height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.board-column.column-dragging {
+  opacity: 0.9;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transform: rotate(2deg);
+}
+
+.column-header {
+  cursor: grab;
+}
+
+.column-header:active {
+  cursor: grabbing;
+}
+
+.board-column.collapsed {
+  min-width: 44px;
+  max-width: 44px;
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 12px;
+  padding: 12px 6px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  transition: background 0.15s;
+}
+
+.board-column.collapsed:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.collapse-expand-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.collapse-expand-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.collapsed-header {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.collapsed-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.collapsed-count {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px 4px;
+  gap: 4px;
+}
+
+.column-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #172b4d;
+  margin: 0;
+  flex: 1;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+.column-title:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.column-title-input {
+  font-size: 14px;
+  font-weight: 600;
+  color: #172b4d;
+  margin: 0;
+  flex: 1;
+  padding: 4px 6px;
+  border: 2px solid #0079bf;
+  border-radius: 4px;
+  outline: none;
+  background: #fff;
+  font-family: inherit;
+}
+
+.column-actions {
+  display: flex;
+  gap: 2px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+  color: #6b778c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.column-cards {
+  flex: 1;
+  overflow-y: auto;
+  padding: 4px 8px;
+  min-height: 8px;
+}
+
+.column-cards.drag-over {
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+}
+
+.column-cards::-webkit-scrollbar {
+  width: 6px;
+}
+
+.column-cards::-webkit-scrollbar-thumb {
+  background: #bfc4ce;
+  border-radius: 6px;
+}
+
+.add-card-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  border-radius: 0 0 12px 12px;
+  cursor: pointer;
+  color: #6b778c;
+  font-size: 14px;
+  text-align: left;
+  transition: background 0.1s, color 0.1s;
+}
+
+.add-card-btn:hover {
+  background: rgba(0, 0, 0, 0.06);
+  color: #172b4d;
+}
+
+/* Add card form */
+.add-card-form {
+  padding: 4px 8px 8px;
+}
+
+.add-card-input {
+  width: 100%;
+  background: #22272b;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #b6c2cf;
+  font-size: 14px;
+  font-family: inherit;
+  resize: none;
+  outline: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.add-card-input:focus {
+  outline: 2px solid #579dff;
+}
+
+.add-card-input::placeholder {
+  color: #8c9bab;
+}
+
+.add-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.add-card-submit {
+  background: #579dff;
+  color: #1d2125;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.add-card-submit:hover {
+  background: #85b8ff;
+}
+
+.add-card-cancel {
+  background: none;
+  border: none;
+  color: #6b778c;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.add-card-cancel:hover {
+  background: rgba(0, 0, 0, 0.06);
+  color: #172b4d;
+}
